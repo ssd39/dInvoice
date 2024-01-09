@@ -3,8 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { connect } from "./redux/didSlice";
 import { checkProtocol } from "./redux/protocolSlice";
-import "./Components/ScreenEffect.css";
-import ScreenEffect from "./Components/ScreenEffect";
 import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Home() {
@@ -16,61 +14,7 @@ export default function Home() {
   const isDiDError = useSelector((state) => state.did.isError);
   const isProtocolError = useSelector((state) => state.protocol.isError);
   const did = useSelector((state) => state.did.did);
-  const ref = useRef();
-  useEffect(() => {
-    /*dispatch(connect()).then(() => {
-      dispatch(checkProtocol()).then(() => {
-        setLoading(false);
-      });
-    });*/
-    if (ref.current) {
-      const config = {
-        effects: {
-          roll: {
-            enabled: false,
-            options: {
-              speed: 1000,
-            },
-          },
-          image: {
-            enabled: false,
-            options: {
-              src: "",
-              blur: 1.2,
-            },
-          },
-          vignette: { enabled: true },
-          scanlines: { enabled: true },
-          vcr: {
-            enabled: true,
-            options: {
-              opacity: 1,
-              miny: 220,
-              miny2: 220,
-              num: 70,
-              fps: 60,
-            },
-          },
-          wobbley: { enabled: true },
-          snow: {
-            enabled: false,
-            options: {
-              opacity: 0.2,
-            },
-          },
-        },
-      };
 
-      const screen = new ScreenEffect("#screen");
-      setTimeout(() => {
-        for (const prop in config.effects) {
-          if (!!config.effects[prop].enabled) {
-            screen.add(prop, config.effects[prop].options);
-          }
-        }
-      }, 1000);
-    }
-  }, [ref.current]);
 
   useEffect(() => {
     if (isDiDError) {
