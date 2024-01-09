@@ -1,0 +1,30 @@
+{
+  "protocol": "https://dInvoice.defi/dinvoice",
+  "published": true,
+  "types": {
+    "invoice": {
+      "schema": "https://dInvoice.defi/dinvoice/schemas/invoice.json",
+      "dataFormats": ["application/json"]
+    },
+    "inwardresponse": {
+      "schema": "https://dInvoice.defi/dinvoice/schemas/inwardresponse.json",
+      "dataFormats": ["application/json"]
+    }
+  },
+  "structure": {
+    "invoice": {
+      "$actions": [
+        { "who": "anyone", "can": "write" },
+        { "who": "author", "of": "invoice", "can": "read" },
+        { "who": "recipient", "of": "invoice", "can": "read" }
+      ]
+    },
+    "inwardresponse": {
+      "$actions": [
+        { "who": "anyone", "can": "write" },
+        { "who": "author", "of": "invoice", "can": "read" },
+        { "who": "recipient", "of": "invoice", "can": "read" }
+      ]
+    }
+  }
+}

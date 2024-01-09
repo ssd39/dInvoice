@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.inner-shadow{
+  box-shadow: inset 6px 6px 10px 0 rgba(0,0,0,0.2), inset -6px -6px 10px 0 rgba(255,255,255,0.5);
+}
+
+
+.dbutton {
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 10px !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.gradient-bg{
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #155799, #159957);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #155799, #159957); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+
+.css-9mgopn-MuiDivider-root {
+  margin: 0 !important;
+  -webkit-flex-shrink: 0 !important;
+  -ms-flex-negative: 0 !important;
+  flex-shrink: 0 !important;
+  border-width: 0 !important;
+    border-bottom-width: 0px !important;
+  border-style: solid !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  border-bottom-width: thin !important;
+}

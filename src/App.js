@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect } from "react";
+import Header from "./Components/Header";
+import Menubar from "./Components/Menubar";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function App() {
+  const navigate = useNavigate();
+  const did = useSelector((state) => state.did.did);
+  const location = useLocation()
+  useEffect(() => {
+    if (!did) {
+      const next = location.pathname
+      navigate(`/?next=${next}`);
+    }
+  }, [did]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen  flex flex-col">
+      <Header />
+      <div className="flex-1 flex mt-2 rounded-t-3xl mx-6 m inner-shadow">
+        <div className="flex w-full">
+          <Menubar />
+          <div className="flex-1">
+            <Outlet />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
