@@ -112,7 +112,9 @@ export default function Overview() {
         chartData_[ini.dateOfIssue].outwards += ini.subTotal;
       }
       console.log(chartData_);
-      setChartData(Object.values(chartData_));
+      setChartData(Object.values(chartData_).sort(function(a, b) {
+        return new Date(a.name) - new Date(b.name)
+      }));
 
       const catData_ = {
         Other: {
@@ -149,9 +151,7 @@ export default function Overview() {
         }
       }
       console.log(Object.values(catData_));
-      setTagGroups(Object.values(catData_).sort(function(a, b) {
-        return new Date(a.name) - new Date(b.name)
-      }));
+      setTagGroups(Object.values(catData_));
 
       setLoading(false);
     }
