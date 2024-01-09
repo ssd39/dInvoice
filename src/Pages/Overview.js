@@ -129,7 +129,7 @@ export default function Overview() {
               count: 0,
             };
           }
-          catData_[ini.invoiceTag] += 1;
+          catData_[ini.invoiceTag].count += 1;
         } else {
           catData_["Other"].count += 1;
         }
@@ -143,7 +143,7 @@ export default function Overview() {
               count: 0,
             };
           }
-          catData_[ini.invoiceTag] += 1;
+          catData_[ini.invoiceTag].count += 1;
         } else {
           catData_["Other"].count += 1;
         }
