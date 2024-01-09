@@ -21,7 +21,3 @@ The journey of developing dInvoice taught us invaluable lessons about the paramo
 
 ## What's next for dInvoice
 Moving forward, our focus is on enhancing user data control further and expanding compatibility with an even broader array of digital currencies. Strengthening security measures and continually improving user experience remains at the core of our roadmap for dInvoice's future.
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
