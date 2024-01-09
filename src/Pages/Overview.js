@@ -149,7 +149,9 @@ export default function Overview() {
         }
       }
       console.log(Object.values(catData_));
-      setTagGroups(Object.values(catData_));
+      setTagGroups(Object.values(catData_).sort(function(a, b) {
+        return new Date(a.name) - new Date(b.name)
+      }));
 
       setLoading(false);
     }
