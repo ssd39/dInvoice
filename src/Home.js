@@ -94,18 +94,7 @@ export default function Home() {
         style={{ position: "relative" }}
         className="flex items-center justify-center"
       >
-        <div
-          className="flex items-center justify-center"
-          style={{
-            position: "absolute",
-            right: 0,
-            left: 0,
-            marginLeft: 0,
-            marginRight: 0,
-          }}
-        >
-          <div ref={ref} id="screen"></div>
-        </div>
+      
 
         <img src="/logo.png" className="z-10" />
       </div>
